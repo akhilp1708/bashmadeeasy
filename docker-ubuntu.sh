@@ -1,9 +1,9 @@
 #!/bin/bash
 
-sudo apt-get remove docker docker-engine docker.io containerd runc
-sudo apt-get update
+sudo apt-get remove docker docker-engine docker.io containerd runc -y
+sudo apt-get update -y
 
-sudo apt-get install \
+sudo apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -17,8 +17,8 @@ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
    
- sudo apt-get update
- sudo apt-get install docker-ce docker-ce-cli containerd.io
+ sudo apt-get update -y 
+ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
  
  sudo usermod -aG docker $(whoami)
  
